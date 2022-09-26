@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const colors = require("colors");
-
 const app = require("./app");
 
 // database connection
-mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }).then(() => {
+mongoose.connect(process.env.DATABASE).then(() => {
     console.log(`Database connection is working properly`.red.bold);
-    console.log(`my owner wanted to see blue color`.blue.bold);
+    console.log(`my coder wanted to see blue color`.blue.bold);
 })
 
 
